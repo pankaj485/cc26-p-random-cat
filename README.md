@@ -1,12 +1,12 @@
-# FreeAPI Meals UI
+# FreeAPI Random Cat
 
-A React + TypeScript app that fetches and displays meal recipes from a public API.
+A React + TypeScript app that fetches and displays a random cat breed from a public API.
 
 ## What it does
 
-Fetches meal data from [FreeAPI](https://freeapi.app) on load and renders them as a responsive grid of recipe cards.
+Fetches a random cat breed from [FreeAPI](https://freeapi.app) on load and renders a detailed breed card with visual trait ratings.
 
-Each card shows: meal image, name, category, cuisine area, tags, instructions (truncated), ingredients list, and links to YouTube and source if available.
+The card shows: breed image, name, origin, life span, weight, description, temperament tags, trait rating bars (adaptability, affection, energy, etc.), and links to Wikipedia and CFA.
 
 ## Tech stack
 
@@ -19,34 +19,34 @@ Each card shows: meal image, name, category, cuisine area, tags, instructions (t
 
 ```
 src/
-├── types.d.ts            # Meal and ApiRes type definitions
-├── App.tsx               # Root component — fetches data, renders grid
+├── types.d.ts            # CatBreed and ApiRes type definitions
+├── App.tsx               # Root component — fetches data, renders card
 ├── components/
-│   └── Meal.tsx          # MealCard component
+│   └── Cat.tsx           # CatCard component
 └── main.tsx              # App entry point
 ```
 
 ## Getting started
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 ## API
 
 Data is fetched from:
 ```
-GET https://api.freeapi.app/api/v1/public/meals
+GET https://api.freeapi.app/api/v1/public/cats/cat/random
 ```
 
-Response shape is typed via `ApiRes` and `Meal` in `src/types.d.ts`.
+Response shape is typed via `ApiRes` and `CatBreed` in `src/types.d.ts`.
 
 ## Scripts
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Start dev server |
-| `npm run build` | Production build |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
+| `pnpm run dev` | Start dev server |
+| `pnpm run build` | Production build |
+| `pnpm run preview` | Preview production build |
+| `pnpm run lint` | Run ESLint |
