@@ -21,10 +21,10 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-slate-200 p-4 w-max-[1200px]">
+    <div className="bg-slate-200 p-4 w-max-[1000px] h-dvh">
       <h1 className="text-center text-2xl font-semibold">FreeAPI Random Cat</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 m-4 max-w-300 mx-auto mt-10">
+      <div className="grid grid-cols-1 gap-6 m-4 max-w-150 mx-auto mt-10">
         {cat && cat !== null && <CatCard cat={cat} />}
       </div>
     </div>

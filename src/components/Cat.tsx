@@ -12,7 +12,7 @@ const CatCard = ({ cat }: { cat: CatBreed }) => {
   ];
 
   return (
-    <div className="max-w-md bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+    <div className="w-full bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
       <img
         src={cat.image}
         alt={cat.name}
